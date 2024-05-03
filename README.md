@@ -15,8 +15,8 @@ The REST API documentation can be found [on docs.learnhub-sdk.com](https://docs.
 ## Installation
 
 ```sh
-# install from this staging repo
-pip install git+ssh://git@github.com/stainless-sdks/nordic-game-lab/learnhub-sdk-python.git
+# install from the production repo
+pip install git+ssh://git@github.com/nordic-game-lab/learnhub-skd-py.git
 ```
 
 > [!NOTE]
@@ -158,7 +158,7 @@ client = LearnhubSdk(
 )
 
 # Override per-request:
-client.with_options(timeout=5 * 1000).user.retrieve()
+client.with_options(timeout=5.0).user.retrieve()
 ```
 
 On timeout, an `APITimeoutError` is thrown.
@@ -204,9 +204,9 @@ user = response.parse()  # get the object that `user.retrieve()` would have retu
 print(user)
 ```
 
-These methods return an [`APIResponse`](https://github.com/stainless-sdks/tree/main/src/learnhub_sdk/_response.py) object.
+These methods return an [`APIResponse`](https://github.com/nordic-game-lab/learnhub-skd-py/tree/main/src/learnhub_sdk/_response.py) object.
 
-The async client returns an [`AsyncAPIResponse`](https://github.com/stainless-sdks/tree/main/src/learnhub_sdk/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
+The async client returns an [`AsyncAPIResponse`](https://github.com/nordic-game-lab/learnhub-skd-py/tree/main/src/learnhub_sdk/_response.py) with the same structure, the only difference being `await`able methods for reading the response content.
 
 #### `.with_streaming_response`
 
@@ -294,7 +294,7 @@ This package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) con
 
 We take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.
 
-We are keen for your feedback; please open an [issue](https://www.github.com/stainless-sdks/nordic-game-lab/learnhub-sdk-python/issues) with questions, bugs, or suggestions.
+We are keen for your feedback; please open an [issue](https://www.github.com/nordic-game-lab/learnhub-skd-py/issues) with questions, bugs, or suggestions.
 
 ## Requirements
 
